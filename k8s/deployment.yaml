@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appname
+  name: dandel
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: appname
+      app: dandel
   template:
     metadata:
       labels:
-        app: appname
+        app: dandel
     spec:
       containers:
-      - image: okteto.dev/appname:latest
-        name: appname
+      - image: okteto.dev/dandel:latest
+        name: dandel
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: Site
           value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
         - name: Vless_UUID
-          value: "ff226047-9ca4-402b-8255-f47ea870bd08"
+          value: "d460959f-4644-4bf3-9cf4-54121b6135a8"
         - name: Vless_Path
-          value: "/ff226047-9ca4-402b-8255-f47ea870bd08-vless"
+          value: "/d460959f-4644-4bf3-9cf4-54121b6135a8-vless"
         - name: Vmess_UUID
-          value: "ff226047-9ca4-402b-8255-f47ea870bd08"
+          value: "d460959f-4644-4bf3-9cf4-54121b6135a8"
         - name: Vmess_Path
-          value: "/ff226047-9ca4-402b-8255-f47ea870bd08-vmess"
+          value: "/d460959f-4644-4bf3-9cf4-54121b6135a8-vmess"
         - name: Share_Path
-          value: "/ff226047-9ca4-402b-8255-f47ea870bd08-link"
+          value: "/d460959f-4644-4bf3-9cf4-54121b6135a8-link"
